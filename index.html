@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="initial-scale=1.0">
 <meta charset="UTF-8">
 <head>
 <!-- Metadata goes in the head. -->
@@ -19,7 +20,31 @@
 	</tr>
 
 	<tr>
-		<td><img width=400 height=300 src="map.png"></td>
+		<!-- <td><img width=400 height=300 src="map.png"></td> -->
+		<td><div id="map">
+			   <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+		<script>
+			var map;
+			function initMap(){
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat: -31.397, lng: 150.644},
+					zoom: 8
+				});
+			}
+		</script>
+	</div>
 	</tr>
 
 	<tr>
@@ -49,7 +74,7 @@
 
 	<tr>
 		<p><td>
-			<strong><u>IMPORTANT:</u></strong><br> 
+			<strong><u>IMPORTANT:</u></strong><br>
 			This is not to be used for any illegal purposes. <br>
 			Only to be used on networks you have explict permission to be testing!
 		</p></td>
@@ -68,5 +93,6 @@
 			<br />All rights reserved.</h5></td>
 	</tr>
 </table>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmWBcMux1clGKwJsKhrE062aoyUhdbwTE&callback=initMap" async defer></script>
 </body>
 </html>

@@ -3,6 +3,7 @@ html {
 	font-family: Courier New;
 	text-align: center;
 	align-content: center;
+	height: 100%;
 }
 
 h1, h2 {
@@ -15,9 +16,12 @@ table {
 }
 
 td {
-
+	height: 100%;
 	background-color: #000000;
 	color: #a3a3a3;
 	padding: 10px;
-	link-color: #78e38c;
+}
+
+#map {
+	height: 100%;
 }
