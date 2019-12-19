@@ -1,17 +1,23 @@
-.main{
-	background-color: grey;
+html {
+	background-color: #a3a3a3;
 	font-family: Courier New;
-	font-size: 20px;
-}
-.title{
-	font-family: Courier New;
-	font-variant: small-caps;
-	font-stretch: all;
-}
-.tr{
-
-}
-.h1{
 	text-align: center;
 	align-content: center;
+}
+
+h1, h2 {
+	color: #78e38c;
+	font-family: Courier New;
+}
+
+table {
+	border: 0px;
+}
+
+td {
+
+	background-color: #000000;
+	color: #a3a3a3;
+	padding: 10px;
+	link-color: #78e38c;
 }
