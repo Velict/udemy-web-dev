@@ -8,43 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="style.css"></link>
 </head>
 <body>
-	<br>
 <!-- Content goes in the body. -->
-<table align=center>
+<table align="center">
 	<tr>
-		<td><img width=425 src="ntwk.jpg"></td>
-	</tr>
-
-	<tr>
-		<td><h1> trace: </h1><h2>a network forensics tool</h2></td>
+		<td><img src="ntwk.jpg">
+		<br>
+		<h1> trace: </h1><h2>a network forensics tool</h2></td>
 	</tr>
 
 	<tr>
 		<!-- <td><img width=400 height=300 src="map.png"></td> -->
-		<td><div id="map">
-			   <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-		<script>
-			var map;
-			function initMap(){
-				map = new google.maps.Map(document.getElementById('map'), {
-					center: {lat: -31.397, lng: 150.644},
-					zoom: 8
-				});
-			}
-		</script>
-	</div>
+		<td><div id="map"></div></td>	
 	</tr>
 
 	<tr>
@@ -60,7 +34,7 @@
 					<option value=4> IPv4 </option>s
 					<option value=6> IPv6 </option>
 				</select>
-				<button>search</button>
+				<button id="searchBtn">search</button>
 			</form>
 		</td>
 	</tr>
@@ -93,6 +67,9 @@
 			<br />All rights reserved.</h5></td>
 	</tr>
 </table>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmWBcMux1clGKwJsKhrE062aoyUhdbwTE&callback=initMap" async defer></script>
+
+<script src="main.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9PlqbHspQcQiolT7RTRO1yTUk1klMNpc&callback=initMap">
+		</script>
 </body>
 </html>
