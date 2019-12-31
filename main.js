@@ -1,20 +1,19 @@
-// var geo = document.getElementById('geo');
-// function getLocation(){
-//     if (navigator.geolocation){
-//         navigator.geolocation.getCurrentPosition(showPosition);
-//     }
-//     else {
-//         x.innerHTML = "Geolocation not supported by this browser.";      
-//         }
-// }
-
-
 var map;
 var marker;
 var lat, lng;
 var latLon;
 var IP;
 var coords;
+
+var geo = document.getElementById('geo');
+function getLocation(){
+    if (navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }
+    else {
+        x.innerHTML = "Geolocation not supported by this browser.";      
+        }
+}
 
 // get ip to be used from form
 function validate(){
@@ -50,7 +49,7 @@ function doLookup(IP){
 }
 // parse response
 // // if enabled 
-// //     navigator.geolocation.getCurrentPosition(function(position){
+// //     navigator.geolocation.getCurrentPosition(function(position){ 
 //     lat = Number(position.coords.latitude.toFixed(2));
 //     lng = Number(position.coords.longitude.toFixed(2));
     
