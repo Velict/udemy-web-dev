@@ -27,14 +27,14 @@
 			method is the TYPE of request
 			POST to send data to database
 			GET to get data -->
-			<form>
+			<form name="ipForm" onsubmit="return validate()">
 				<label for="ip"> IP Address:</label>
-				<input id="ip" name=ip type="text" placholder="ip addresss" required>
-				<select name="ipType">
+				<input id="ip" name="ip" type="text" required>
+				<!-- <select name="ipType">
 					<option value=4> IPv4 </option>
 					<option value=6> IPv6 </option>
-				</select>
-				<button id="searchBtn" value="" onclick="doLookup();">search</button>
+				</select> -->
+				<input type="submit" value="Submit">
 			</form>
 		</td>
 	</tr>
@@ -69,7 +69,7 @@
 </table>
 
 <script src="main.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=secret&callback=initMap">
 		</script>
 </body>
 </html>
