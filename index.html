@@ -12,19 +12,62 @@
 <!-- Metadata goes in the head. -->
 	<title>trace: a network forensics tool</title>
 	<link rel="stylesheet" type="text/css" href="style.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<!-- Content goes in the body. -->
-<table>
+<!-- Content goes in the body. --><table>
 	<tr>
-		<td><!-- img src="C:\\Users\\iamto\\Documents\\GitHub\\udemy-web-dev\\assets\\rob.jpg" -->
-		<br>
-		<h1> trace: </h1><h2>a network forensics tool</h2></td>
+		<td>
+			<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-custom">
+					<a class="navbar-brand" href="#">trace</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="container"></div>
+					<!-- Whatever is put here will collapse for mobile size -->
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">About</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Facebook</a>
+									<a class="dropdown-item" href="#">LinkedIn</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">More...</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+			</div>
+			</nav>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<!-- img src="C:\\Users\\iamto\\Documents\\GitHub\\udemy-web-dev\\assets\\rob.jpg" -->
+			<br>
+			<h1> trace </h1>
+			<h2>a network forensics tool</h2>
+		</td>
 	</tr>
 
 	<tr class="mapTr">
 		<!-- <td><img width=400 height=300 src="map.png"></td> -->
-		<td><div id="map"></div></td>	
+		<td>
+			<div id="map"></div>
+		</td>
 	</tr>
 
 	<tr>
@@ -33,50 +76,45 @@
 			method is the TYPE of request
 			POST to send data to database
 			GET to get data -->
-			<form name="ipForm" onsubmit="return validate()">
-				<label for="ip"> IP Address:</label>
-				<input id="ip" name="ip" type="text" required>
-				<!-- <select name="ipType">
-					<option value=4> IPv4 </option>
-					<option value=6> IPv6 </option>
-				</select> -->
-				<input type="submit" value="Submit">
-			</form>
+			<div class="mx-auto" style="width: 250px">
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="192.168.0.1" aria-label="Search">
+					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">search</button>
+				</form>
+			</div>
 		</td>
 	</tr>
 
-	<tr>
-		<td><h1>a simplifed solution...</h1>
-		<p>This webtool is designed to be used when 
-		traceroute <em><strong>doesn't</em></strong> provide enough infomation.
-		</td></p>
-	</tr>
-
-	<tr>
-		<p><td>
-			<strong><u>IMPORTANT:</u></strong><br>
-			<br>
-			This is not to be used for any illegal purposes. <br>
-			Only to be used on networks you have explict permission to be testing!
-		</p></td>
-	</tr>
-	
 	<tr>
 		<td>
-			<ul>
-				infomation	contact 
-			</ul>
+			<h1>a simplifed solution...</h1>
+			<p>This webtool is designed to be used when
+				traceroute <em><strong>doesn't</em></strong> provide enough infomation.
+		</td>
+		</p>
+	</tr>
+
+	<tr>
+		<p>
+			<td>
+				<strong><u>IMPORTANT:</u></strong><br>
+				This is not to be used for any illegal purposes. <br>
+				Only to be used on networks you have explict permission to be testing!
+		</p>
 		</td>
 	</tr>
+
 	<tr>
-		<td><h5> Copyright © 2019. 
-			<br />
-			<br />All rights reserved.</h5></td>
+		<td>
+			<h5> Copyright © 2019. All rights reserved.</h5>
+		</td>
 	</tr>
 </table>
 
 <script src="main.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9PlqbHspQcQiolT7RTRO1yTUk1klMNpc&callback=initMap">
-</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9PlqbHspQcQiolT7RTRO1yTUk1klMNpc&callback=initMap"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>

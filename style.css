@@ -1,8 +1,3 @@
-h1, h2 {
-	color: #78e38c;
-	font-family: 'Courier New';
-}
-
 table {
 	margin: auto;
 }
@@ -13,18 +8,13 @@ table {
 	padding: 0;
 }
 
-.mapTr{
-	height: 400px;
-	width: 100%;
-	padding: 0;
-}
-
 td {
-	height: 100%;
+	text-align: center;
 	width: 800px;
-	padding: 5px;
-	background-color: #000000;
-	color: #a3a3a3;
+	padding: 10px;
+	background-color: #264653;
+	color: #e76f51;
+	font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 body {
@@ -33,12 +23,26 @@ body {
 	background-blend-mode: normal;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-color: #000000;
 }
 
-html {
-	font-family: 'Courier New';
-	text-align: center;
-	height: 100%;
-	margin: 20px 100px 20px 100px;
+.navbar-custom {
+	background-color: #264653;
+}
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .nav-link,
+.navbar-custom .navbar-text {
+	color: #ffb997;
+}
+
+.navbar-custom .dropdown-menu {
+	background: #264653;
+}
+
+.navbar-custom .dropdown-item {
+	color: #ffb997;
+}
+
+.navbar-custom .dropdown-divider{
+	color: #e76f51
 }
