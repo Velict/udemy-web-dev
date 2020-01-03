@@ -5,48 +5,32 @@ var latLon;
 var IP;
 var coords;
 
-var geo = document.getElementById('geo');
-function getLocation(){
-    if (navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(showPosition);
-    }
-    else {
-        x.innerHTML = "Geolocation not supported by this browser.";      
-        }
-}
+// var geo = document.getElementById('geo');
+// function getLocation(){
+//     if (navigator.geolocation){
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     }
+//     else {
+//         x.innerHTML = "Geolocation not supported by this browser.";      
+//         }
+// }
 
-// get ip to be used from form
-function validate(){
-    var input = document.forms["ipForm"]["ip"].value;
-    console.log(input);
-    if (form == "" || input == null){
-        alert("Please enter an ip address.")
-        return false;
-    }
-    else{
-        doLookup(input);
-    }
-}
-
+// get ip 
 // save json response
-function doLookup(IP){
-    console.log(IP);
-    if (IP==null){
-        IP = '8.8.8.8'
-    }
-    else{
-        IP = document.getElementById('ip').ip;
-    }
-    console.log(IP);
 
-    const url='https://www.ipinfo.io/' + IP + '?token=secret';
-    
-    fetch(url)
-    .then(data=>{return data.json()})
-    .then(res=>{ console.log(res)})
-    .catch (error=>{console.log(error)})
+function doLookup(){
+   // IP = document.getElementById('ip').value;
+   // var url='ipinfo.io/8.8.8.8/?token=7fcba63eeb5f7a';
 
-}
+    $.getJSON('https://ipinfo.io/geo', function(response) {
+        var loc = response.loc.split(',');
+        var coords = {
+            latitude: loc[0],
+            longitude: loc[1]
+        };
+        console.log(coords);
+    });
+};
 // parse response
 // // if enabled 
 // //     navigator.geolocation.getCurrentPosition(function(position){ 

@@ -12,11 +12,15 @@
 <!-- Metadata goes in the head. -->
 	<title>trace: a network forensics tool</title>
 	<link rel="stylesheet" type="text/css" href="style.css"></link>
+	<script type="text/javascript" src="main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<!-- Content goes in the body. --><table>
+<!-- Content goes in the body. -->
+<table>
 	<tr>
 		<td>
 			<div class="container">
@@ -78,8 +82,8 @@
 			GET to get data -->
 			<div class="mx-auto" style="width: 250px">
 				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="192.168.0.1" aria-label="Search">
-					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">search</button>
+					<input id="ip" value="" class="form-control mr-sm-2" type="search" aria-label="Search">
+					<button class="btn btn-outline-light my-2 my-sm-0" onclick=doLookup() type="submit">search</button>
 				</form>
 			</div>
 		</td>
@@ -111,10 +115,7 @@
 	</tr>
 </table>
 
-<script src="main.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGmKeUhLQqJPVDuMe3a-DndUGWDjBcA8Q&callback=initMap"></script>
 </body>
 </html>
