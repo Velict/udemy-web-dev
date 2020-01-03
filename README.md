@@ -18,3 +18,8 @@ changes, and fixes.
 -Added bootstrap to website.
 -Added navigation bar.
 -Fixed readme.
+
+### 1/2/20
+
+-Officially began JavaScript portion
+-Working on http request to save 
