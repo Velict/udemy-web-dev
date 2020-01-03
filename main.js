@@ -20,7 +20,7 @@ var coords;
 
 function doLookup(){
    // IP = document.getElementById('ip').value;
-   // var url='ipinfo.io/8.8.8.8/?token=7fcba63eeb5f7a';
+   // var url='ipinfo.io/8.8.8.8/?token=';
 
     $.getJSON('https://ipinfo.io/geo', function(response) {
         var loc = response.loc.split(',');
